@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+body{
+    margin: 0;
+    background: url('./images/road\ 3.jpg');
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+p{
+    padding: 10px;
+    font-size: 2rem;
+    font-family: 'Indie Flower', cursive;
+}
+
+#surface{
+    height: 140px;
+    width: 500%;
+    background: url('./images/new\ road\ 3000.png');
+    display: block;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    background-repeat: repeat-x;
+    animation: moveRight 9s linear infinite;
+}
+#car{
+    position: absolute;
+    top: 10%;
+    right: 404px;
+}
+
+
+/* Animation Time!!!*/
+
+
+
+@keyframes moveRight {
+    100% {
+      transform: translateX(1000px);
+    }  
+    100% {
+      transform: translateX(-1000px);
+    }
+   }

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Airplane animation</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <p>click to go Fast!!!</p>
+    <div class="night">
+        
+        <div id="surface"></div>
+        <div id="car">
+            <img src="./images/giphy.gif" alt="">
+        </div>
+    </div>
+    <script>
+        
+                var sceneryFrames =   [
+                { transform: 'translateX(-100%)' },
+                { transform: 'translateX(200%)' }   
+                ];
+                var sceneryTiming = {
+                duration: 36000,
+                iterations: Infinity
+                };
+                var background = document.getElementById('car');
+                var backgroundMovement = background.animate(sceneryFrames,sceneryTiming);
+                backgroundMovement.currentTime = backgroundMovement.effect.getComputedTiming().duration / 10; 
+                setInterval( function(){
+                    if ( backgroundMovement.playbackRate > .4 ) {
+                        backgroundMovement.playbackRate *= .9 
+                    }
+                }, 3000)
+                var flyFaster = function () {
+                    backgroundMovement.playbackRate += 1.1; 
+                }
+                document.addEventListener("click",flyFaster);   
+                </script>
+                
+                
+       
+</body>
+</html>
