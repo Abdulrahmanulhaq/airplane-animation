@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: AIRPLANE
+name: CI
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -28,7 +28,8 @@ jobs:
     - uses: borales/actions-yarn@v2.0.0
       with:
         cmd: install # will run `yarn install` command
+
     - name: Install Surge 
       run: npm install --global surge
     - name: Deploy to surge 
-      run: surge ./ airplaneanimation-AR.surge.sh --token ${{secrets.SURGE_TOKEN}}  
+      run: surge ./ animationprojectar.surge.sh --token ${{secrets.SURGE_TOKEN}}
