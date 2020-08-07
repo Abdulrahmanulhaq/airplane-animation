@@ -12,18 +12,22 @@
         <div id="car">
             <img src="./images/giphy.gif" alt="">
         </div>
+        <div id="car2">
+            <img src="./images/car.gif" width="100px" alt="">
+        </div>
     </div>
     <script>
         
                 var sceneryFrames =   [
                 { transform: 'translateX(-100%)' },
-                { transform: 'translateX(200%)' }   
+                { transform: 'translateX(300%)' }   
                 ];
                 var sceneryTiming = {
                 duration: 36000,
                 iterations: Infinity
                 };
                 var background = document.getElementById('car');
+                
                 var backgroundMovement = background.animate(sceneryFrames,sceneryTiming);
                 backgroundMovement.currentTime = backgroundMovement.effect.getComputedTiming().duration / 10; 
                 setInterval( function(){
@@ -34,7 +38,25 @@
                 var flyFaster = function () {
                     backgroundMovement.playbackRate += 1.1; 
                 }
-                document.addEventListener("click",flyFaster);   
+                document.addEventListener("click",flyFaster);  
+                
+                var sceneryFrames =   [
+        { transform: 'translateX(-100%)' },
+        { transform: 'translateX(1290%)' }   
+        ];
+        var sceneryTiming = {
+        duration: 36000,
+        iterations: Infinity
+        };
+        var abackground = document.getElementById('car2');
+        var abackgroundMovement = abackground.animate(sceneryFrames,sceneryTiming);
+        abackgroundMovement.currentTime = abackgroundMovement.effect.getComputedTiming().duration / 50; 
+
+
+        var cloudflyFaster = function () {
+            backgroundMovement.playbackRate += 1.1; 
+        }
+        document.addEventListener("click",cloudflyFaster);
                 </script>
                 
                 

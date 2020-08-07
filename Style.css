@@ -2,7 +2,7 @@
 
 body{
     margin: 0;
-    background: url('./images/road\ 3.jpg');
+    background: url('./images/Img_1.png');
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center center;
@@ -20,20 +20,24 @@ p{
 #surface{
     height: 140px;
     width: 500%;
-    background: url('./images/new\ road\ 3000.png');
+    background: url('./images/Img_02.png');
     display: block;
     position: absolute;
     bottom: 0%;
     left: 0%;
     background-repeat: repeat-x;
-    animation: moveRight 9s linear infinite;
+    animation: moveRight 10s linear infinite;
 }
 #car{
     position: absolute;
     top: 10%;
-    right: 404px;
+    right: 804px;
 }
-
+#car2{
+    position: absolute;
+    top: 86%;
+    right:1204px;
+}
 
 /* Animation Time!!!*/
 
